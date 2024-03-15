@@ -1,9 +1,16 @@
 const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
+const router = require("./routes/router");
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+//Middlewares
+app.use(express.json());
+
+//Route
+app.use("/api", router);
 
 //Connection to database
 async function connectToDatabase() {
