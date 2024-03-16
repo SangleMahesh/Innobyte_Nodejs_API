@@ -1,6 +1,9 @@
+const User = require("../models/user");
 async function validate(request, response, next) {
   try {
     const { username, password } = request.body;
+    const existingUsername = await User.findOne({ username });
+    if (existingUsername) throw new Error("Username already taken");
     if (!username || username.length < 3 || username.length > 16) {
       throw new Error("Username must be between 3 and 16 characters long");
     }
