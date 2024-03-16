@@ -18,6 +18,7 @@ const userSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+//Hashing the user password
 userSchema.pre("save", function (next) {
   const user = this;
   bcrypt.hash(user.password, 10, (err, hash) => {
