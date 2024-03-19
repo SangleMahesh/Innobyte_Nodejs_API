@@ -1,28 +1,19 @@
 const User = require("../models/user");
-const JWT = require("jsonwebtoken");
+async function handleSignUp(req, res) {
+  const { username, email, password } = req.body;
 
-async function handleSignup(request, response) {
-  const { username, email, password } = request.body;
   try {
-    const user = await User.create({
+    const newUser = await User.create({
       username,
       email,
       password,
     });
-    await user.save();
 
-    const payload = {
-      name: username,
-    };
-
-    const token = JWT.sign(payload, process.env.ACCESS_TOKEN_KEY);
-    response.cookie("jwt", token, { httpOnly: true, secure: true });
-
-    response.sendStatus(201);
+    return res.status(200).json({ message: "User created successfully" });
   } catch (error) {
-    console.log(error);
-    response.status(500).json({ error: "Failed to create user" });
+    console.error("Error occurred while saving user:", error);
+    return res.status(500).json({ error: "Failed to create user" });
   }
 }
 
-module.exports = handleSignup;
+module.exports = handleSignUp;
