@@ -8,7 +8,7 @@ function verifyToken(request, response, next) {
   if (!token) {
     return response.status(401).json({
       error:
-        "There is account associated with this email address. Please signup!",
+        "There is no account associated with this email address. Please signup!",
     });
   }
 
