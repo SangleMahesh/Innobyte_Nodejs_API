@@ -3,13 +3,15 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const router = require("./routes/router");
 const cookieParser = require("cookie-parser");
+const expressValidator = require("express-validator");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 //Middlewares
 app.use(express.json());
 app.use(cookieParser());
+app.use(expressValidator());
 
 //Route
 app.use("/api", router);
@@ -31,7 +33,7 @@ connectToDatabase();
 
 // Start server
 function startServer() {
-  app.listen(process.env.PORT, () => {
+  app.listen(port, () => {
     console.log(`Server started on port : http://localhost:${port}`);
   });
 }

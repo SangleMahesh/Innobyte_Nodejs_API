@@ -3,12 +3,12 @@ const JWT = require("jsonwebtoken");
 function verifyToken(request, response, next) {
   const token =
     request.cookies.access_token ||
-    request.headers["authorization"]?.split(" ")[1];
+    (request.headers.authorization &&
+      request.headers.authorization.split(" ")[1]);
 
   if (!token) {
     return response.status(401).json({
-      error:
-        "There is no account associated with this email address. Please signup!",
+      error: "Unauthorized: No token provided",
     });
   }
 
