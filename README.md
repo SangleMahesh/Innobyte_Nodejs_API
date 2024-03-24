@@ -5,14 +5,16 @@ This project is a backend API for user authentication, built using Node.js and E
 ## Table of Contents
 
 1. [Overview](#overview)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Getting Started](#getting-started)
-5. [Endpoints](#endpoints)
-6. [Authentication](#authentication)
-7. [Sending Verification Emails](#sending-verification-emails)
-8. [Error Handling](#error-handling)
+2. [Getting Started](#getting-started)
+3. [Features](#features)
+4. [Endpoints](#endpoints)
+5. [Authentication](#authentication)
+6. [Sending Verification Emails](#sending-verification-emails)
+7. [Error Handling](#error-handling)
+8. [Technologies Used](#technologies-used)
 9. [Contributing](#contributing)
+10. [License](#license)
+
 
 ## Overview <a name="overview"></a>
 
