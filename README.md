@@ -2,7 +2,23 @@
 
 This project is a backend API for user authentication, built using Node.js and Express. It provides endpoints for user registration, login, and accessing user profiles using JSON Web Tokens (JWT) for authentication.
 
-## Features
+## Table of Contents
+
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Getting Started](#getting-started)
+5. [Endpoints](#endpoints)
+6. [Authentication](#authentication)
+7. [Sending Verification Emails](#sending-verification-emails)
+8. [Error Handling](#error-handling)
+9. [Contributing](#contributing)
+
+## Overview <a name="overview"></a>
+
+This project aims to provide a secure and scalable solution for user authentication in web applications. It uses modern technologies and best practices to ensure robustness and reliability.
+
+## Features<a name="features"></a>
 
 - User registration
 - User login
@@ -11,7 +27,7 @@ This project is a backend API for user authentication, built using Node.js and E
 - Error handling
 - Sending verification emails
 
-## Technologies Used
+## Technologies Used <a name="technologies-used"></a>
 
 - Node.js
 - Express.js
@@ -55,21 +71,21 @@ To get started with the project, follow these steps:
    ```bash
    npm run start:dev
 
-## Endpoints
+## Endpoints <a name="endpoints"></a>
 - POST /api/signup: Register a new user.
 - POST /api/signin: Login with existing credentials and receive a JWT token.
 - GET /api/profile: Get the profile of the currently logged-in user.
 
-## Authentication
+## Authentication <a name="authentication"></a>
 This API uses JSON Web Tokens (JWT) for authentication. When a user logs in successfully, a JWT token is generated and sent back in the response. This token should be included in the Authorization header of subsequent requests to access protected routes.
 
-## Sending Verification Emails
+## Sending Verification Emails <a name="sending-verification-emails"></a>
 When a user registers, a verification email is sent to their email address. The email contains a link for the user to click and verify their email address. Verification emails are sent using Nodemailer, and the HTML template for the email can be customized according to your requirements.
 
-## Error Handling
+## Error Handling <a name="error-handling"></a>
 The API handles errors gracefully and returns appropriate HTTP status codes along with error messages in JSON format.
 
-## Contributing
+## Contributing <a name="contributing"></a>
 Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or create a pull request.
 
 
