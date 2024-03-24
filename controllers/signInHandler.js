@@ -16,8 +16,9 @@ async function handleSignIn(request, response) {
     }
 
     const payload = {
-      name: user.username,
-      email: email,
+      id: user._id,
+      username: user.username,
+      email: user.email,
     };
 
     const token = jwt.sign(payload, process.env.ACCESS_TOKEN_KEY);
