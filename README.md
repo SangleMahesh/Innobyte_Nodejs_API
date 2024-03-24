@@ -13,7 +13,6 @@ This project is a backend API for user authentication, built using Node.js and E
 7. [Error Handling](#error-handling)
 8. [Technologies Used](#technologies-used)
 9. [Contributing](#contributing)
-10. [License](#license)
 
 
 ## Overview <a name="overview"></a>
