@@ -56,8 +56,8 @@ To get started with the project, follow these steps:
    npm run start:dev
 
 # Endpoints
-- POST /api/signu: Register a new user.
-- POST /api/signup: Login with existing credentials and receive a JWT token.
+- POST /api/signup: Register a new user.
+- POST /api/signin: Login with existing credentials and receive a JWT token.
 - GET /api/profile: Get the profile of the currently logged-in user.
 
 # Authentication
