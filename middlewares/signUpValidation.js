@@ -12,7 +12,7 @@ function signUpValidate(req, res, next) {
     .withMessage("Username is required")
     .isLength({ min: 3, max: 16 })
     .withMessage("Username must be between 3 and 16 characters long")
-    .trim(); // Added to remove leading and trailing whitespace
+    .trim();
 
   req
     .check("password")
@@ -29,10 +29,10 @@ function signUpValidate(req, res, next) {
 
   const errors = req.validationErrors();
   if (errors) {
-    return res.status(400).json({ errors: errors });
+    const errorMessage = errors.map((error) => error.msg);
+    return res.status(400).json({ errors: errorMessage });
   }
 
-  // If no validation errors, proceed to the next middleware
   next();
 }
 
