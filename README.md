@@ -73,11 +73,13 @@ To get started with the project, follow these steps:
    npm run start:dev
 
 ## Endpoints <a name="endpoints"></a>
+
 - POST /api/signup: Register a new user.
 - POST /api/signin: Login with existing credentials and receive a JWT token.
 - GET /api/profile: Get the profile of the currently logged-in user.
 
 ## Authentication <a name="authentication"></a>
+
 This API uses JSON Web Tokens (JWT) for authentication. When a user logs in successfully, a JWT token is generated and sent back in the response. This token should be included in the Authorization header of subsequent requests to access protected routes.
 
 ## Sending Verification Emails <a name="sending-verification-emails"></a>
@@ -85,9 +87,11 @@ This API uses JSON Web Tokens (JWT) for authentication. When a user logs in succ
 When a user registers, a verification email is sent to their email address. The email contains a six-digit one-time password (OTP) for the user to verify their email address. Verification emails are sent using Nodemailer, and the HTML template for the email can be customized according to your requirements.
 
 ## Error Handling <a name="error-handling"></a>
+
 The API handles errors gracefully and returns appropriate HTTP status codes along with error messages in JSON format.
 
 ## Contributing <a name="contributing"></a>
+
 Contributions are welcome! If you find any issues or have suggestions for improvement, feel free to open an issue or create a pull request.
 
 ```vbnet
