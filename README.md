@@ -2,6 +2,7 @@
 
 This project is a backend API for user authentication, built using Node.js and Express. It provides endpoints for user registration, login, and accessing user profiles using JSON Web Tokens (JWT) for authentication.
 
+# Features
 
 - User registration
 - User login
