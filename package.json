@@ -1,7 +1,7 @@
 {
   "name": "innobyte_nodejs_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project is a backend API for user authentication, built using Node.js and Express. It provides endpoints for user registration, login, and accessing user profiles using JSON Web Tokens (JWT) for authentication.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,6 +11,10 @@
   "keywords": [],
   "author": "Mahesh_Sangle",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SangleMahesh/Innobyte_Nodejs_API.git"
+  }
   "dependencies": {
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
